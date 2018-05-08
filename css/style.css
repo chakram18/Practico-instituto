@@ -1,0 +1,194 @@
+/** Globales **/
+
+body{
+    background-image: url(../img/2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contenedor{
+    background-color: white;
+    min-height: 900px;
+}
+
+h1{
+    font-size: 2.2em
+}
+h2{
+    padding-top: 35px;
+    text-transform: uppercase;
+}
+h2::after{
+    content: "";
+    border-top: 14px solid #2e4980;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    display: block;
+}
+h3{
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 80%;
+    color: #970808;
+    font-weight: bold;
+}
+h4{
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+
+/** Nav **/
+
+.barra-navegacion{
+    background-color: #2E4980;
+}
+.barra-navegacion a {
+    color: #ffffff;
+    text-align: center;
+}
+.barra-navegacion form button{
+    background-color: #dc3545;
+    color: #ffffff;
+}
+.barra-navegacion form button:hover{
+    text-decoration: underline;
+}
+.activo{
+    color: #dc3545 !important;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+/** Pagina principal**/
+
+.info-web img{
+    width: 100%;
+    max-height: 300px;    
+}
+.info-web p{
+    font-size: .9em;
+}
+
+/** Cursos **/
+
+div.cursos{
+    border: 1px solid 	#2E4980;
+    background-color: #ffffff;
+    transition: all .3s ease;   
+}
+div.cursos h3{
+    margin: 0 auto;
+}
+div.cursos:hover{
+    transform: scale(1.1);
+    border: 2px solid #2E4980;
+    box-shadow: 0px 0px 50px #666;
+}
+div.cursos ul li{
+    width: 90%;
+    font-size: .9em;
+}
+div.cursos ul {
+    width: 80%;
+    margin: 0 auto;
+}
+div.cursos img{
+    width: 80%;
+    border-radius: 50%;
+    max-height: 152px;
+}
+.mensaje-extra{
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+/** Contacto **/
+
+.mapa {
+    height: 300px;
+    width: 100%;
+}
+
+/** Alumnos **/
+
+.alert-success{
+    background-color: #007bff;
+    color: white;
+}
+.alert-danger{
+    background-color: #dc3545;
+    color: white;
+}
+.agregar-alumno{
+    color: #ffffff;
+    background-color:#007bff;
+    border-color: #007bff;
+}
+
+.agregar-alumno:hover{
+    background-color: #007bff;
+    border-color: #007bff;
+    text-decoration: underline;
+}
+
+.consultar-alumnos{
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+}
+.consultar-alumnos:hover{
+    background-color: #007bff;
+    border-color: #007bff;
+    text-decoration: underline;
+}
+.cerrar-modal{
+    background-color: #dc3545;
+    color: white;
+}
+.cerrar-modal:hover{
+    text-decoration: underline;
+}
+
+/** Modal **/
+h5{
+    text-align: right;
+}
+
+/* Footer */
+
+footer{
+    background-color: #2E4980;
+    color: #ffffff;
+}
+footer h3{
+    color: #ffffff;
+    font-size: 1.3em;
+}
+footer nav a{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+footer nav a:hover{
+    color:#dc3545;
+}
+
+/** Media queries **/
+
+@media only screen and (min-width: 768px){
+    div.cursos {
+        min-height: 800px ;
+    }
+    footer nav a{
+        text-decoration: none;
+        font-size: 1.4em;
+        color: #ffffff;
+    }
+}
+@media only screen and (min-width: 992px){
+    div.cursos {
+        min-height: 700px ;
+    }
+}

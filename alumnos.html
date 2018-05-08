@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instituto Speedwagon</title>
+    <link rel="stylesheet" href="webfonts/fontawesome-all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="barra-navegacion container ">
+        <nav class="navbar navbar-expand-xl- row">
+            <a href="index.html" class="px-1">Inicio</a>
+            <a href="cursos.html" class="px-1">Cursos</a>
+            <a href="contacto.html" class="px-1">Contacto</a>
+            <form class="form-inline my-2 my-lg-0 ">
+                <input class="form-control mr-sm-1" type="text" placeholder="Usuario">
+                <input class="form-control mr-sm-1" type="text" placeholder="Contraseña">
+                <button class="btn  my-2 my-sm-2" id="login" type="submit">Iniciar sesion</button>
+            </form>
+        </nav>
+    </div>
+    <div class="container contenedor">
+        <h2 class="text-center">Alumnos</h2>
+        <div class=" text-center alert alert-success hide alert-dismissible d-none" role="alert" id="successAlert">
+            <strong>Datos cargados satifactoriamiente</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times; </span>
+            </button>
+        </div>
+        <div class="text-center alert alert-danger hide alert-dismissible d-none" role="alert" id="errorAlert">
+            <strong>Error al cargar los datos</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times; </span>
+            </button>
+        </div> <!-- Alertas de success y error -->
+        <div class="row text-center py-3">
+            <div class="col-12 col-sm-6">
+                <form >
+                    <button type="button" class="btn agregar-alumno" data-toggle="modal" data-target="#exampleModal"> Agregar alumno</button>
+                </form>
+            </div>
+            <div class="col-12  col-sm-6">
+                <form>   
+                    <input type="button" value="Consultar alumnos" id="consulta" class="btn consultar-alumnos">
+                </form> 
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo alumno</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body  text-left">
+                            <form>
+                                <div class="form-group">
+                                    <label for="nombre" class="col-3 py-1">Nombre</label> 
+                                    <input type="text" class="col-8 py-1" id="nombre" placeholder="Nombre del alumno" required> <br>
+                                    <label for="apellido" class="col-3 py-1">Apellido</label>
+                                    <input type="text" class="col-8 py-1" id="apellido" placeholder="Apellido del alumno" required> <br>
+                                    <label for="email" class="col-3 py-1" >Email</label>
+                                    <input type="email" class="col-8 py-1" id="email" placeholder="Email del alumno"> <br>
+                                    <label for="foto" class="col-3 py-1">Foto</label>
+                                    <input type="text" class="col-8 py-1" id="foto" placeholder="Link de la foto">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <form action="">
+                            <button type="button" class="btn cerrar-modal" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn agregar-alumno" id="agregarAlumno">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="table-responsive">
+            <table  class="table">
+                <thead class="d-none">
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Foto</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>    
+   </div> 
+    <footer class="container pt-3">
+        <div class="row">
+            <div class="logo col-12 col-sm-12 col-md-4">
+                <img src="img/logo1.png" alt="Loco de cambridge" class="my-1 w-100">
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 pl-5">
+                <h3 class="">Contacto</h3>
+                <ul class="mt-2 pl-0">
+                    <li>Telefono : 261 542 82</li>
+                    <li>Celular : 093 312 632</li>
+                    <li>Email : xxxxxx@edu.uy</li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+                <h3 class="">Redes Sociales</h3>
+                <nav class="redes-sociales mt-2">
+                    <a href="http://www.facebook.com" target="_blank"><i class="mr-3 fab fa-facebook-f"></i></a>
+                    <a href="http://www.instagram.com" target="_blank"><i class="mr-3 fab fa-instagram"></i></a>
+                    <a href="http://www.twitter.com" target="_blank"><i class="mr-3 fab fa-twitter"></i></a>
+                    <a href="http://www.youtube.com" target="_blank"><i class="mr-3 fab fa-youtube"></i></a>
+                </nav>
+            </div>
+        </div>
+        <div class="text-center"> 
+            <p class="mb-0"><small>&copy; Copyright 2058, Instituto Speedwagon</small></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmYGsPfltjqaNnpwY0xJuhPfEJdRgC-yE&callback=initMap"
+    async defer></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!--         <div id="exito" class="alert alert-success alert-dismissible fade show text-center d-none" role="alert">
+            <strong>Archivos cargados satifacotriamente
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-6">    
+                <h1 class="text-center">Practico de ajax</h1>
+                <form >
+                    <input type="button" value="Consultar alumnos" id="consulta" aria-label="close" class=" btn btn-primary">
+                    <input type="button" value="Agregar alumnos" id="asd" class=" btn btn-success">
+                </form>
+                <br>
+            </div>    
+        </div>
+        <div class="table-responsive-sm-12">
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Foto</th> 
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div> -->
